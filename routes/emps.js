@@ -59,7 +59,7 @@ appForEmps.put("/:id", (request, response)=>{
     
     var query = 
     `update Employee_tb set e_name = '${request.body.e_name}',
-                    password = '${request.body.password}' where id = ${request.params.ENo}`;
+                    password = '${request.body.password}' where id = ${request.params.id}`;
 
     connection.query(query, (error, result)=>{
                         if(error==null)
