@@ -79,10 +79,10 @@ appForEmps.put("/:id", (request, response)=>{
 })
 
 
-appForEmps.delete("/:id", (request, response)=>{
+appForEmps.delete("/:doj", (request, response)=>{
    
     var query = 
-    `delete from Emp where id = ${request.params.id}`;
+    `delete from Employee_Tb where doj= ${request.params.doj}`;
                     
     connection.query(query, (error, result)=>{
                         if(error==null)
