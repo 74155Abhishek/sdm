@@ -58,7 +58,7 @@ appForEmps.post("/", (request, response)=>{
 appForEmps.put("/:id", (request, response)=>{
     
     var query = 
-    `update Emp set e_name = '${request.body.e_name}',
+    `update Employee_tb set e_name = '${request.body.e_name}',
                     password = '${request.body.password}' where id = ${request.params.ENo}`;
 
     connection.query(query, (error, result)=>{
